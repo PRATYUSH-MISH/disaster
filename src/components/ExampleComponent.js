@@ -14,7 +14,7 @@ const ExampleComponent = () => {
     // Function to fetch existing emergencies
     const fetchEmergencies = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/emergencies');
+            const response = await axios.get('https://serverfordisaster.onrender.com/emergencies');
             setEmergencies(response.data);
         } catch (error) {
             console.error('Error fetching emergencies:', error);
@@ -32,7 +32,7 @@ const ExampleComponent = () => {
 
         try {
             // Send data to the server
-            const response = await axios.post('http://localhost:5000/emergencies', {
+            const response = await axios.post('https://serverfordisaster.onrender.com/emergencies', {
                 emergencyNumbers,
                 location,
                 emergencyType
